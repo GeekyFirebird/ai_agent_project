@@ -6,17 +6,17 @@ def test() -> None:
     print(result)
     print("")
 
-    result = get_files_info("calculator", "/bin")
+    result = get_files_info("calculator", "pkg")
     print("Result for '/bin' directory:")
     print(result)
     print("")
 
-    result = get_files_info("calculator", "../")
+    result = get_files_info("calculator", "/bin")
     print("Result for '../' directory:")
     print(result)
     print("")
 
-    result = get_files_info("calculator", "main.py")
+    result = get_files_info("calculator", "../")
     print("Result for 'main.py':")
     print(result)
 
