@@ -5,13 +5,13 @@ from config import MAX_CHARS
 
 schema_get_file_content = types.FunctionDeclaration(
         name="get_file_content",
-        description="Get file content in a specified directory relative to the working directory",
+        description=f"Retrieves the content (at most {MAX_CHARS} characters) of a specified file within the working directory",
         parameters=types.Schema(
             type=types.Type.OBJECT,
             properties={
                 "file_path": types.Schema(
                     type=types.Type.STRING,
-                    description="A file path to read the contents of the file from, relative to the working directory",
+                    description="Path to the file to read, relative to the working directory",
                 ),
             },
              required=["file_path"],
